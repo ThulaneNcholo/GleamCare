@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GleamCare - Laundry & Dry Cleaners - Home</title>
+    <!-- Google fonts -->
+    <link
+      href="//fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="assets/css/style-starter.css" />
+
+    <!-- BootStrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- AOS animation  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <style>
+    :root {
+      --gnt-primary-color: #332980;
+      --gnt-accent-color: linear-gradient(90deg, #332980, #685bc7);
+    }
+    .primary_bg {
+      background-color: #332980;
+    }
+
+    .banner_cards {
+      background: var(--gnt-accent-color) !important;
+    }
+
+    .w3l-feature-8 .feature-images i {
+      background: var(--gnt-accent-color) !important;
+      color: #ed8b00;
+    }
+
+    .feature-images span {
+      background: lightgrey !important;
+      color: var(--gnt-primary-color) !important;
+    }
+
+    .background_pattern {
+      background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M27.26 5.415c-.55 0-.9.55-.65 1l2.45 4.75c.2.5.85.5 1.15.1l3.15-4.5c.3-.4 0-1.05-.55-1.1zM10.689 8.068c-.406-.051-.822.31-.778.748l.5 5.3c.05.5.6.8 1.05.5l4.55-3.05c.45-.3.4-.95-.05-1.15l-5.1-2.3a.605.605 0 0 0-.172-.048zM2.406 24.584a.635.635 0 0 0-.345.081l-4.75 2.4c-.45.2-.5.85-.1 1.15l4.45 3.15c.4.3 1 0 1.1-.5l.3-5.55c0-.412-.31-.712-.655-.73zm40 0a.635.635 0 0 0-.345.081l-4.75 2.4c-.45.2-.5.85-.1 1.15l4.45 3.15c.4.3 1 0 1.1-.5l.3-5.55c0-.412-.31-.712-.655-.73zm-22.17 3.108a.744.744 0 0 0-.675.723l.4 5.55c.05.5.6.8 1.05.5l4.45-2.95c.45-.25.4-.9-.05-1.15l-4.8-2.6a.702.702 0 0 0-.376-.073z'  stroke-width='1' stroke='none' fill='hsla(247, 51%, 33%, 1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    }
+
+    .light_pattern {
+      background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(3) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 100%, 1)'/><path d='M27.26 5.415c-.55 0-.9.55-.65 1l2.45 4.75c.2.5.85.5 1.15.1l3.15-4.5c.3-.4 0-1.05-.55-1.1zM10.689 8.068c-.406-.051-.822.31-.778.748l.5 5.3c.05.5.6.8 1.05.5l4.55-3.05c.45-.3.4-.95-.05-1.15l-5.1-2.3a.605.605 0 0 0-.172-.048zM2.406 24.584a.635.635 0 0 0-.345.081l-4.75 2.4c-.45.2-.5.85-.1 1.15l4.45 3.15c.4.3 1 0 1.1-.5l.3-5.55c0-.412-.31-.712-.655-.73zm40 0a.635.635 0 0 0-.345.081l-4.75 2.4c-.45.2-.5.85-.1 1.15l4.45 3.15c.4.3 1 0 1.1-.5l.3-5.55c0-.412-.31-.712-.655-.73zm-22.17 3.108a.744.744 0 0 0-.675.723l.4 5.55c.05.5.6.8 1.05.5l4.45-2.95c.45-.25.4-.9-.05-1.15l-4.8-2.6a.702.702 0 0 0-.376-.073z'  stroke-width='1' stroke='none' fill='hsla(246, 49%, 80%, 1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    }
+
+    .about_background {
+      background-image: url("assets/images/GNT/GNT-about-bg.svg");
+      background-repeat: no-repeat;
+      height: 600px;
+      width: 100%;
+    }
+
+    .about_section_bg {
+      background: var(--gnt-accent-color);
+    }
+
+    .about_pattern {
+      height: 250px;
+      width: 50%;
+      background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(3) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 100%, 0)'/><path d='M27.26 5.415c-.55 0-.9.55-.65 1l2.45 4.75c.2.5.85.5 1.15.1l3.15-4.5c.3-.4 0-1.05-.55-1.1zM10.689 8.068c-.406-.051-.822.31-.778.748l.5 5.3c.05.5.6.8 1.05.5l4.55-3.05c.45-.3.4-.95-.05-1.15l-5.1-2.3a.605.605 0 0 0-.172-.048zM2.406 24.584a.635.635 0 0 0-.345.081l-4.75 2.4c-.45.2-.5.85-.1 1.15l4.45 3.15c.4.3 1 0 1.1-.5l.3-5.55c0-.412-.31-.712-.655-.73zm40 0a.635.635 0 0 0-.345.081l-4.75 2.4c-.45.2-.5.85-.1 1.15l4.45 3.15c.4.3 1 0 1.1-.5l.3-5.55c0-.412-.31-.712-.655-.73zm-22.17 3.108a.744.744 0 0 0-.675.723l.4 5.55c.05.5.6.8 1.05.5l4.45-2.95c.45-.25.4-.9-.05-1.15l-4.8-2.6a.702.702 0 0 0-.376-.073z'  stroke-width='1' stroke='none' fill='hsla(246, 43%, 91%, 1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    }
+
+    .about_image {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .about_icon {
+      font-size: 18px;
+      margin-right: 10px;
+      color: #ed8b00;
+    }
+
+    .discovery_btn {
+      color: var(--gnt-primary-color);
+    }
+
+    /* How it works style start  */
+    .works_img {
+      height: 300px;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    .about_title {
+      color: var(--gnt-primary-color) !important;
+    }
+
+    /* why book with us img  */
+    .book_img {
+      height: 500px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .book_title {
+      color: var(--gnt-primary-color);
+      font-weight: bold;
+    }
+
+    .banner_container {
+      background-color: #33298097;
+    }
+
+    /* call to action style  */
+    .call_card {
+      background: var(--gnt-accent-color);
+      border-radius: 12px;
+      width: 100%;
+    }
+
+    /* Footer styling start  */
+    .footer_card {
+      background-color: var(--gnt-primary-color);
+    }
+
+    .company_span {
+      color: #ed8b00;
+    }
+
+    .footer_subtitles {
+      color: #ed8b00;
+    }
+
+    /* navbar style  */
+    .company_sub_name {
+      color: #ed8b00 !important;
+    }
+  </style>
+
+  <body>
+    <!-- header -->
+    <header id="site-header" class="fixed-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="index.html">
+            <span>Gleam</span><span class="company_sub_name">Care</span>
+          </a>
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+            <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- banner section -->
+    <section class="banner-19">
+      <div class="banner-layer">
+        <video autoplay muted loop id="myVideo">
+          <source src="assets/videos/LaundryVideo03.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+        <div class="main-content-top">
+          <div class="container">
+            <div
+              class="main-content"
+              style="overflow: hidden"
+              data-aos="zoom-in"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+            >
+              <h1 class="fw-bold text-white">
+                GleamCare Laundry & Dry Cleaners
+              </h1>
+              <p class="mt-3">
+                Unparalleled Cleanliness, Unmatched Convenience.
+              </p>
+              <a href="about.html" class="btn btn-style mt-md-5 mt-4"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //banner section -->
+
+    <!-- banner bottom section -->
+    <section class="w3l-bottom-grids-6 py-5">
+      <div class="container pt-lg-5 pt-md-4 pt-2">
+        <div
+          class="row justify-content-center"
+          style="overflow: hidden"
+          data-aos="zoom-in"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+        >
+          <div class="col-lg-4 col-md-6">
+            <div class="area-box banner_cards h-100">
+              <i class="bi bi-star-fill"></i>
+              <h4>
+                <a href="about.html" class="title-head text-light"
+                  >Premium Quality Service</a
+                >
+              </h4>
+              <p class="text-white">
+                Immerse your garments in a world of perfection with GleamCare's
+                premium quality service. Our cutting-edge technology ensures
+                impeccable cleaning, while our gentle touch pampers even the
+                most delicate fabrics, leaving them refreshed and revitalized.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+            <div class="area-box banner_cards h-100">
+              <i class="bi bi-truck"></i>
+              <h4>
+                <a href="about.html" class="title-head text-light"
+                  >Convenient Pickup & Delivery</a
+                >
+              </h4>
+              <p class="text-white">
+                Your time is precious, and so is your wardrobe. GleamCare offers
+                convenient pickup and delivery services, allowing you to
+                schedule laundry on your terms. With real-time tracking, you're
+                always in the loop, making laundry day a breeze.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
+            <div class="area-box banner_cards h-100">
+              <i class="bi bi-globe-europe-africa"></i>
+              <h4>
+                <a href="about.html" class="title-head text-light"
+                  >Eco-Friendly Practices</a
+                >
+              </h4>
+              <p class="text-white">
+                At GleamCare, we don't just clean clothes; we care for the
+                planet. Our eco-friendly practices prioritize green cleaning
+                solutions and sustainable operations, ensuring your clothes not
+                only look good but also contribute to a cleaner, healthier
+                environment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //banner bottom section -->
+
+    <!-- services section -->
+    <div class="w3l-grids-block-5 pb-5 pt-md-2 pt-4">
+      <div class="container pb-lg-5 pb-md-4 pb-2">
+        <div
+          class="title-main text-center mx-auto mb-md-5 mb-4"
+          style="max-width: 500px"
+        >
+          <h5 class="sub-title">What We Offer</h5>
+          <h3 class="title-style">Our Services</h3>
+        </div>
+        <div
+          class="row text-center justify-content-center"
+          style="overflow: hidden"
+          data-aos="zoom-in"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+        >
+          <div class="col-lg-4 col-md-6">
+            <div class="servicecard-single">
+              <div class="grids5-info position-relative">
+                <img
+                  src="assets/images/GNT/Laundry03.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+              <div class="content-main-top">
+                <h4><a href="services.html">Regular Laundry</a></h4>
+                <p>
+                  Experience the luxury of freshly laundered clothes every day,
+                  meticulously washed, and expertly folded by GleamCare's
+                  skilled professionals.
+                </p>
+                <a class="btn btn-style mt-4" href="services.html">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+            <div class="servicecard-single">
+              <div class="grids5-info position-relative">
+                <img
+                  src="assets/images/GNT/Laundry04.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+              <div class="content-main-top">
+                <h4><a href="services.html">Dry Cleaning</a></h4>
+                <p>
+                  Entrust your delicate fabrics to GleamCare's specialized dry
+                  cleaning service, where precision and care meet to preserve
+                  the integrity of your most treasured garments.
+                </p>
+                <a class="btn btn-style mt-4" href="services.html">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
+            <div class="servicecard-single">
+              <div class="grids5-info position-relative">
+                <img
+                  src="assets/images/GNT/Laundry05.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+              <div class="content-main-top">
+                <h4><a href="services.html">Express Service</a></h4>
+                <p>
+                  Need it in a hurry? GleamCare's express service guarantees a
+                  quick turnaround without compromising on the thoroughness that
+                  defines our standard of excellence.
+                </p>
+                <a class="btn btn-style mt-4" href="services.html">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //services section -->
+
+    <!-- New about section -->
+    <section class="section about_section_bg py-5 my-5">
+      <div
+        class="container"
+        style="overflow: hidden"
+        data-aos="fade-left"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+      >
+        <h5 class="sub-title text-white">More than 25 Years of Experience</h5>
+        <h3 class="title-style text-white">What We Are Passionate About</h3>
+        <p class="mt-4 text-light">
+          GleamCare is passionate about elevating your laundry experience.
+          Beyond cleanliness, we aim to enhance your lifestyle by delivering
+          meticulous care and personalized attention to each garment, embodying
+          a commitment to excellence in every aspect.
+        </p>
+
+        <div class="d-flex align-items-center mt-5 mb-3">
+          <i class="fas fa-check-circle about_icon"></i>
+          <p class="mb-0 text-light">
+            <span class="fw-bold">Excellence in Fabric Care</span>
+            GleamCare is passionate about impeccable fabric care, ensuring your
+            garments look pristine and last longer.
+          </p>
+        </div>
+        <!-- end item  -->
+        <div class="d-flex align-items-center mt-5 mb-3">
+          <i class="fas fa-check-circle about_icon"></i>
+          <p class="mb-0 text-light">
+            <span class="fw-bold">Customer Satisfaction Priority</span>
+            At GleamCare, exceeding expectations is our passion, providing an
+            extraordinary laundry experience for your satisfaction.
+          </p>
+        </div>
+        <!-- end item  -->
+        <div class="d-flex align-items-center mt-5 mb-3">
+          <i class="fas fa-check-circle about_icon"></i>
+          <p class="mb-0 text-light">
+            <span class="fw-bold">Sustainable Practices</span>
+            GleamCare passionately adopts eco-friendly practices for a cleaner,
+            greener future.
+          </p>
+        </div>
+        <!-- end item  -->
+        <a href="about.html" class="btn btn-style mt-5 bg-light discovery_btn"
+          >Discover More</a
+        >
+      </div>
+    </section>
+    <!-- New about section -->
+
+    <!-- Book us Section -->
+    <section class="py-5 my-5">
+      <div class="row mx-0 d-flex align-items-center">
+        <div class="col-12 col-lg-6 pb-5">
+          <img
+            src="assets/images/GNT/Laundry06.jpg"
+            alt="card-image"
+            class="book_img"
+          />
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="p-xl-5 p-sm-4 mx-xl-3">
+            <h5 class="sub-title">Get 30% Discount</h5>
+            <h3 class="title-style book_title">
+              Why Book Our Laundry Services
+            </h3>
+            <p class="sub-title mt-3">
+              GleamCare's team of professionals is dedicated to delivering
+              reliable and experienced laundry services tailored to your needs.
+            </p>
+            <div class="row mt-5 pt-xl-4">
+              <div class="col-sm-6 icon-style">
+                <i class="fas fa-tshirt"></i>
+                <div class="ab-detail">
+                  <h4 class="title-head mb-sm-3 mb-2">
+                    <a href="services.html">Customer Satisfaction Guaranteed</a>
+                  </h4>
+                  <p>
+                    At GleamCare, we stand by our commitment to customer
+                    satisfaction, offering a laundry experience that exceeds
+                    expectations.
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-6 icon-style mt-sm-0 mt-4">
+                <i class="fas fa-shipping-fast"></i>
+                <div class="ab-detail">
+                  <h4 class="title-head mb-sm-3 mb-2">
+                    <a href="services.html">State-of-the-Art Facilities</a>
+                  </h4>
+                  <p>
+                    Our cutting-edge facilities leverage the latest technology
+                    to ensure optimal results, leaving your clothes impeccably
+                    clean and refreshed.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Book us Section -->
+
+    <!-- New works section -->
+    <section class="py-5" style="background-color: #f5f4f9">
+      <div class="container">
+        <div
+          class="title-main text-center mx-auto mb-md-5 mb-4"
+          style="max-width: 500px"
+        >
+          <h5 class="sub-title">Pickup & Deliver</h5>
+          <h3 class="title-style">How We Works</h3>
+        </div>
+
+        <div
+          class="row d-flex align-items-center mb-5"
+          style="overflow: hidden"
+          data-aos="zoom-in"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+        >
+          <div class="col-12 col-md-6 mb-4">
+            <img src="assets/images/GNT/work01.svg" alt="" class="works_img" />
+          </div>
+          <div class="col-12 col-md-6">
+            <h3 class="feature-title">
+              <a class="about_title fw-bold" href="about.html"
+                >Schedule Your Pickup</a
+              >
+            </h3>
+            <p class="feature-text">
+              Your time is valuable, and scheduling with GleamCare is designed
+              for your convenience. Choose morning, afternoon, or evening pickup
+              to suit your schedule, putting you in control of your laundry.
+            </p>
+          </div>
+        </div>
+        <!-- end items  -->
+        <div
+          class="row d-flex align-items-center mb-5"
+          style="overflow: hidden"
+          data-aos="zoom-in"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+        >
+          <div class="col-12 col-md-6 order-md-2 mb-4">
+            <img src="assets/images/GNT/work-2.svg" alt="" class="works_img" />
+          </div>
+          <div class="col-12 col-md-6 order-md-1">
+            <h3 class="feature-title">
+              <a class="about_title fw-bold" href="about.html"
+                >Careful Cleaning Process</a
+              >
+            </h3>
+            <p class="feature-text">
+              In our state-of-the-art facilities, GleamCare employs cutting-edge
+              technology and a human touch for a meticulous cleaning process.
+              From everyday wear to delicate fabrics, each item is treated with
+              attention to detail, ensuring a thorough and revitalizing clean.
+            </p>
+          </div>
+        </div>
+        <!-- end items  -->
+        <div
+          class="row d-flex align-items-center mb-5"
+          style="overflow: hidden"
+          data-aos="zoom-in"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+        >
+          <div class="col-12 col-md-6 mb-4">
+            <img src="assets/images/GNT/work03.svg" alt="" class="works_img" />
+          </div>
+          <div class="col-12 col-md-6">
+            <h3 class="feature-title">
+              <a class="about_title fw-bold" href="about.html">Quality Check</a>
+            </h3>
+            <p class="feature-text">
+              Quality is non-negotiable. Before returning your garments, each
+              piece undergoes a rigorous inspection by our dedicated team. Trust
+              that your clothes will be returned in impeccable condition,
+              meeting our commitment to excellence.
+            </p>
+          </div>
+        </div>
+        <!-- end items  -->
+        <div
+          class="row d-flex align-items-center mb-5"
+          style="overflow: hidden"
+          data-aos="zoom-in"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+        >
+          <div class="col-12 col-md-6 order-md-2 mb-4">
+            <img src="assets/images/GNT/work04.svg" alt="" class="works_img" />
+          </div>
+          <div class="col-12 col-md-6 order-md-1">
+            <h3 class="feature-title">
+              <a class="about_title fw-bold" href="about.html"
+                >Prompt Delivery</a
+              >
+            </h3>
+            <p class="feature-text">
+              Convenience is key, and GleamCare ensures prompt delivery of your
+              freshly laundered garments. After cleaning and quality checks, we
+              swiftly dispatch your order to your doorstep, adding an extra
+              layer of convenience to your refreshed wardrobe. At GleamCare,
+              prompt delivery is the final step in our commitment to providing a
+              service that aligns with your lifestyle.
+            </p>
+          </div>
+        </div>
+        <!-- end items  -->
+
+        <div class="text-center">
+          <a href="services.html" class="btn btn-style mt-5"
+            >Book Our Services Now</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- New works section -->
+
+    <!-- blog section -->
+    <div class="blog-bg-sec pb-5 pt-4">
+      <div class="container pb-lg-5 pb-md-4 pb-2">
+        <div
+          class="title-main text-center mx-auto mb-md-5 mb-4"
+          style="max-width: 500px"
+        >
+          <h5 class="sub-title">News & Articles</h5>
+          <h3 class="title-style">Latest Blog Posts</h3>
+        </div>
+        <div
+          class="row justify-content-center"
+          style="overflow: hidden"
+          data-aos="fade-right"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+        >
+          <div class="col-lg-4 col-md-6 grids5-info">
+            <a href="#"
+              ><img
+                src="assets/images/GNT/Laundry16.jpg"
+                alt=""
+                class="img-fluid radius-image"
+            /></a>
+            <div class="blog-info-grid">
+              <h4>
+                <a href="#">The Art of Stain Removal: Tips and Tricks"</a>
+              </h4>
+              <div class="blog-info mt-4">
+                <a href="#" class="btn-style btn-style-primary"
+                  >Read More <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 grids5-info mt-md-0 mt-4">
+            <a href="#"
+              ><img
+                src="assets/images/GNT/Laundry17.jpg"
+                alt=""
+                class="img-fluid radius-image"
+            /></a>
+            <div class="blog-info-grid">
+              <h4>
+                <a href="#">Choosing the Right Detergent for Your Clothes! </a>
+              </h4>
+              <div class="blog-info mt-4">
+                <a href="#" class="btn-style btn-style-primary"
+                  >Read More <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 grids5-info mt-lg-0 mt-4">
+            <a href="#"
+              ><img
+                src="assets/images/GNT/Laundry15.jpg"
+                alt=""
+                class="img-fluid radius-image"
+            /></a>
+            <div class="blog-info-grid">
+              <h4>
+                <a href="#">The Science Behind Dry Cleaning </a>
+              </h4>
+              <div class="blog-info mt-4">
+                <a href="#" class="btn-style btn-style-primary"
+                  >Read More <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //blog section -->
+
+    <!-- New Call to Action Section -->
+    <section class="container">
+      <div
+        class="call_card py-5 mb-5"
+        style="overflow: hidden"
+        data-aos="fade-left"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+      >
+        <center>
+          <h3 class="title-big mb-3">
+            Transform Your Laundry Experience with GleamCare
+          </h3>
+          <p class="text-light mb-3">
+            Ready to experience the epitome of laundry excellence? Contact us
+            today for a hassle-free, convenient, and premium service.
+          </p>
+          <a href="contact.html">
+            <button class="btn btn-light rounded-pill px-3 mt-3">
+              Order Now
+            </button>
+          </a>
+        </center>
+      </div>
+    </section>
+    <!-- New Call to Action Section -->
+
+    <!-- New Footer section  -->
+    <section class="footer_card py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 col-lg-3 mb-4">
+            <h3 class="text-light fw-bold mb-3">
+              Gleam<span class="company_span">Care</span> Laundry Service
+            </h3>
+            <p class="text-light mb-0">
+              Unparalleled Cleanliness, Unmatched Convenience.
+            </p>
+          </div>
+          <div class="col-12 col-md-4 col-lg-3 mb-4">
+            <h5 class="mb-4 footer_subtitles">Company</h5>
+            <a href="index.html">
+              <p class="text-light">Home</p>
+            </a>
+            <a href="about.html">
+              <p class="text-light">About Us</p>
+            </a>
+            <a href="services.html">
+              <p class="text-light">Services</p>
+            </a>
+            <a href="contact.html">
+              <p class="text-light">Contact</p>
+            </a>
+          </div>
+          <div class="col-12 col-md-4 col-lg-3 mb-4">
+            <h5 class="mb-4 footer_subtitles">Contact Info</h5>
+            <p class="text-light mb-1 fw-bold">Phone</p>
+            <p class="text-light">011 837 7363</p>
+            <p class="text-light mt-3 mb-1 fw-bold">Email</p>
+            <p class="text-light">admin@gleamcare.co.za</p>
+          </div>
+          <div class="col-12 col-md-4 col-lg-3 mb-4">
+            <h5 class="mb-4 footer_subtitles">Socials</h5>
+            <div class="main-social-footer-29">
+              <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="linkedin"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <center>
+          <div class="mt-5">
+            <p class="copy-footer-29">
+              © <span id="currentYear"></span>
+              <span class="fw-bold">GleamCare</span>. Developed by
+              <a
+                class="fw-bold"
+                href="https://gnttechnology.co.za/"
+                target="_blank"
+                style="color: orangered"
+              >
+                GNT TECHNOLOGY</a
+              >
+            </p>
+          </div>
+        </center>
+      </div>
+    </section>
+    <!-- New Footer section  -->
+
+    <!-- Js scripts -->
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+      <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+    </button>
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("movetop").style.display = "block";
+        } else {
+          document.getElementById("movetop").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+      // Get the current year
+      const currentYear = new Date().getFullYear();
+      // Update the content of the <p> tag
+      document.getElementById("currentYear").textContent = currentYear;
+    </script>
+    <!-- //move top -->
+
+    <!-- common jquery plugin -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- theme switch js (light and dark)-->
+    <script src="assets/js/theme-change.js"></script>
+    <!-- //theme switch js (light and dark)-->
+
+    <!-- MENU-JS -->
+    <script>
+      $(window).on("scroll", function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 80) {
+          $("#site-header").addClass("nav-fixed");
+        } else {
+          $("#site-header").removeClass("nav-fixed");
+        }
+      });
+
+      //Main navigation Active Class Add Remove
+      $(".navbar-toggler").on("click", function () {
+        $("header").toggleClass("active");
+      });
+      $(document).on("ready", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+        $(window).on("resize", function () {
+          if ($(window).width() > 991) {
+            $("header").removeClass("active");
+          }
+        });
+      });
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+      $(function () {
+        $(".navbar-toggler").click(function () {
+          $("body").toggleClass("noscroll");
+        });
+      });
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!-- bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- //bootstrap -->
+    <!-- //Js scripts -->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
